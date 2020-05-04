@@ -1,0 +1,15 @@
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Entidades.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.csprojAssemblyReference.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.AssemblyInfoInputs.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.AssemblyInfo.cs
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.csproj.CoreCompileInputs.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Datos.deps.json
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Datos.runtimeconfig.json
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Datos.runtimeconfig.dev.json
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Datos.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Datos.pdb
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\bin\Debug\netcoreapp3.1\Sistemas.Entidades.pdb
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.csproj.CopyComplete
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.pdb
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Datos\obj\Debug\netcoreapp3.1\Sistemas.Datos.genruntimeconfig.cache
