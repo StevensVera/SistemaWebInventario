@@ -1,6 +1,4 @@
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.csprojAssemblyReference.cache
-C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.csproj.CoreCompileInputs.cache
-C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.AssemblyInfoInputs.cache
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.AssemblyInfo.cs
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -16,9 +14,7 @@ C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Micros
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
@@ -35,3 +31,5 @@ C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\static
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.dll
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.pdb
 C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\obj\Debug\netcoreapp3.1\Sistemas.Web.genruntimeconfig.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\Remotion.Linq.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Web\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll

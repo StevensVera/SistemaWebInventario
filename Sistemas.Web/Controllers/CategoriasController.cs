@@ -9,7 +9,7 @@ using Sistema.Datos;
 using Sistemas.Entidades.Almacen;
 using Sistemas.Web.Models.Almacen.Categorias;
 
-namespace Sistemas.Web.Controllers
+namespace Sistema.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,31 +22,17 @@ namespace Sistemas.Web.Controllers
             _context = context;
         }
 
-  // Creamos el Metodo listar para la tabla de Categorias mediate ViewModel
-        // GET: api/Categorias/Listar
-        [HttpGet("[action]")] 
-        public async Task <IEnumerable<CategoriaViewModel>> Listar()
+        // GET: api/Categorias
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategorias()
         {
-            var categoria = await _context.Categorias.ToListAsync();
-
-            return categoria.Select(c => new CategoriaViewModel
-            {
-                idcategoria = c.idcategoria,
-                nombre = c.nombre,
-                descripcion = c.descripcion,
-                condicion = c.condicion
-            }
-            
-            
-            ); 
+            return await _context.Categorias.ToListAsync();
         }
 
-    // Creamos el Metodo los registro de la tabla Categorias
-        // GET: api/Categorias/Mostrar/1
-        [HttpGet("[action]/{id}")]
-        public async Task<IActionResult> Mostrar([FromRoute] int id)
+        // GET: api/Categorias/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Categoria>> GetCategoria(int id)
         {
-           // Instaciamos para realizar la busqueda por id.
             var categoria = await _context.Categorias.FindAsync(id);
 
             if (categoria == null)
@@ -54,45 +40,19 @@ namespace Sistemas.Web.Controllers
                 return NotFound();
             }
 
-            return Ok(new CategoriaViewModel { 
-            
-                idcategoria = categoria.idcategoria,
-                nombre = categoria.nombre,
-                descripcion = categoria.descripcion,
-                condicion = categoria.condicion
-            });
+            return categoria;
         }
-    
-    // Creamos el Metodo los Actualizar los registros de la tabla Categorias
-        // PUT: api/Categorias/Actualizar
-        [HttpPut("[action]")]
-        public async Task<IActionResult> Actualizar([FromBody] ActualizarViewModel model)
-        {   
-            //Validamos el modelo por si no se cumple el DataAnnotation
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            //Indicamos el que Id si existe
-            if (model.idcategoria <= 0)
+        // PUT: api/Categorias/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCategoria(int id, Categoria categoria)
+        {
+            if (id != categoria.idcategoria)
             {
                 return BadRequest();
             }
 
-            //Consultar que la categoria exista con el id expecifico
-            var categoria = await _context.Categorias.FirstOrDefaultAsync(c => c.idcategoria == model.idcategoria);
-
-            // Creamos una condicion para evaluar no sea null
-            if(categoria == null)
-            {
-                return NotFound();
-
-            }
-            // Si se encuentra el objeto se actualiza la lista de esos datos
-
-            categoria.nombre = model.nombre;
-            categoria.descripcion = model.descripcion;
+            _context.Entry(categoria).State = EntityState.Modified;
 
             try
             {
@@ -100,152 +60,44 @@ namespace Sistemas.Web.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Guardar Excepcion
-                return BadRequest();
+                if (!CategoriaExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            return Ok();
+            return NoContent();
         }
 
-    // Creamos el Metodo Crear los registro de la tabla Categorias
-        // POST: api/Categorias/Crear
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Crear([FromBody] CrearViewModel model)
+        // POST: api/Categorias
+        [HttpPost]
+        public async Task<ActionResult<Categoria>> PostCategoria(Categoria categoria)
         {
-   // Valida el DataAnnotation, es decir que se cumpla el contenido de la clase CrearViewModel
-   // Ejemplo que la el campo nombre tenga maximo 50 caracteres y menos de 3
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            // Creamos la Instacia
-            Categoria categoria = new Categoria
-            {
-                nombre = model.nombre,
-                descripcion = model.descripcion,
-                condicion = true
-
-            };
-
             _context.Categorias.Add(categoria);
+            await _context.SaveChangesAsync();
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-
-                return BadRequest();
-            }
-
-            return Ok();
-
+            return CreatedAtAction("GetCategoria", new { id = categoria.idcategoria }, categoria);
         }
 
-     // Creamos el Metodo Eliminar los registro de la tabla Categorias
-        // DELETE: api/Categorias/Eliminar/1
-        [HttpDelete("[action]/{id}")]
-        public async Task<IActionResult> Eliminar([FromRoute] int id)
+        // DELETE: api/Categorias/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Categoria>> DeleteCategoria(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             var categoria = await _context.Categorias.FindAsync(id);
             if (categoria == null)
             {
                 return NotFound();
             }
 
-            _context.Categorias.Remove(categoria);           
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
+            _context.Categorias.Remove(categoria);
+            await _context.SaveChangesAsync();
 
-                return BadRequest();
-            }
-
-            return Ok(categoria);
+            return categoria;
         }
-
-     // Creamos el Metodo para deactivar los registro de la tabla Categorias
-        // PUT: api/Categorias/Desactivar/1
-        [HttpPut("[action]/{id}")]
-        public async Task<IActionResult> Desactivar([FromRoute] int id)
-        {
-            //Indicamos el que Id si existe
-            if (id <= 0)
-            {
-                return BadRequest();
-            }
-
-            //Consultar que la categoria exista con el id expecifico
-            var categoria = await _context.Categorias.FirstOrDefaultAsync(c => c.idcategoria == id);
-
-            // Creamos una condicion para evaluar no sea null
-            if (categoria == null)
-            {
-                return NotFound();
-
-            }
-            // Si se encuentra el objeto se actualiza la lista de esos datos
-
-            categoria.condicion = false;
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                // Guardar Excepcion
-                return BadRequest();
-            }
-
-            return Ok();
-        }
-
-     // Creamos el Metodo para Activar los registro de la tabla Categorias
-        // PUT: api/Categorias/Activar/1
-        [HttpPut("[action]/{id}")]
-        public async Task<IActionResult> Activar([FromRoute] int id)
-        {
-            //Indicamos el que Id si existe
-            if (id <= 0)
-            {
-                return BadRequest();
-            }
-
-            //Consultar que la categoria exista con el id expecifico
-            var categoria = await _context.Categorias.FirstOrDefaultAsync(c => c.idcategoria == id);
-
-            // Creamos una condicion para evaluar no sea null
-            if (categoria == null)
-            {
-                return NotFound();
-
-            }
-            // Si se encuentra el objeto se actualiza la lista de esos datos
-
-            categoria.condicion = true;
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                // Guardar Excepcion
-                return BadRequest();
-            }
-
-            return Ok();
-        }
-
 
         private bool CategoriaExists(int id)
         {

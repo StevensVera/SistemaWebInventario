@@ -1,0 +1,9 @@
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\bin\Debug\netcoreapp2.2\Sistemas.Entidades.deps.json
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\bin\Debug\netcoreapp2.2\Sistemas.Entidades.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\bin\Debug\netcoreapp2.2\Sistemas.Entidades.pdb
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.csprojAssemblyReference.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.csproj.CoreCompileInputs.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.AssemblyInfoInputs.cache
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.AssemblyInfo.cs
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.dll
+C:\Aplicaciones\SistemaWebInventario\Sistemas.Entidades\obj\Debug\netcoreapp2.2\Sistemas.Entidades.pdb

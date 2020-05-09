@@ -29,16 +29,20 @@ namespace Sistemas.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<DbContextSistema>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
+
+            services.AddCors(options =>{
+                options.AddPolicy("AllowMyOrigin", builder => builder.WithOrigins("*").WithHeaders("*").WithMethods("*"));
+            });
 
             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -49,18 +53,18 @@ namespace Sistemas.Web
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-            
+
+            app.UseCors("AllowMyOrigin");
             app.UseStaticFiles();
-            app.UseRouting();
-            
-            
+            //app.UseRouting();
+ 
             app.UseHttpsRedirection();
             app.UseAuthentication();
-            app.UseAuthorization();
+            //app.UseAuthorization();
             //app.UseMvc();
 
-           app.UseEndpoints(endpoints =>
-           endpoints.MapControllers());
+           //app.UseEndpoints(endpoints =>
+           //endpoints.MapControllers());
         }
     }
 }

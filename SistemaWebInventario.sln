@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistemas.Datos", "Sistemas.Datos\Sistemas.Datos.csproj", "{F3E49B4C-96ED-4A9F-9685-C0C2D5DCC6A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sistemas.Datos", "Sistemas.Datos\Sistemas.Datos.csproj", "{F3E49B4C-96ED-4A9F-9685-C0C2D5DCC6A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistemas.Entidades", "Sistemas.Entidades\Sistemas.Entidades.csproj", "{8228F8B4-C696-4DE0-9FD9-BE97D20DA9C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sistemas.Entidades", "Sistemas.Entidades\Sistemas.Entidades.csproj", "{8228F8B4-C696-4DE0-9FD9-BE97D20DA9C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistemas.Web", "Sistemas.Web\Sistemas.Web.csproj", "{D5BE963F-96C3-4DF6-AA25-E9161CDA7871}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema.Web", "Sistema.Web\Sistema.Web.csproj", "{8AACBDFA-2287-49F4-80DE-DC6205D2B1CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8228F8B4-C696-4DE0-9FD9-BE97D20DA9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8228F8B4-C696-4DE0-9FD9-BE97D20DA9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8228F8B4-C696-4DE0-9FD9-BE97D20DA9C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5BE963F-96C3-4DF6-AA25-E9161CDA7871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5BE963F-96C3-4DF6-AA25-E9161CDA7871}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5BE963F-96C3-4DF6-AA25-E9161CDA7871}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5BE963F-96C3-4DF6-AA25-E9161CDA7871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AACBDFA-2287-49F4-80DE-DC6205D2B1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AACBDFA-2287-49F4-80DE-DC6205D2B1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AACBDFA-2287-49F4-80DE-DC6205D2B1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AACBDFA-2287-49F4-80DE-DC6205D2B1CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
